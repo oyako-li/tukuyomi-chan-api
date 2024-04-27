@@ -1,0 +1,10 @@
+# requirements.txt
+espnet
+pyopenjtalk-prebuilt==0.2.0
+typeguard==2.13.3
+espnet_model_zoo
+torchaudio
+ipykernel
+fastapi
+jinja2
+uvicorn[standard]
