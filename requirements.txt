@@ -8,3 +8,5 @@ ipykernel
 fastapi
 jinja2
 uvicorn[standard]
+pydub
+beautifulsoup4

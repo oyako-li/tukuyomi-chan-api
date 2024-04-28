@@ -6,7 +6,6 @@ from fastapi.responses import FileResponse
 from synthesize import tts
 import soundfile as sf
 import tempfile
-import uvicorn
 import warnings
 
 warnings.simplefilter("ignore", UserWarning)
@@ -26,6 +25,11 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+def root():
+    return "Hello World!"
+
+
 @app.get("/tts", response_class=FileResponse)
 async def get_tts(text: str):
     audio_bytes, sample_rate = tts(text)
@@ -39,4 +43,6 @@ async def get_tts(text: str):
 
 
 if __name__ == "__main__":
+    import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=5001)
