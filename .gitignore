@@ -1,4 +1,4 @@
-data/*.wav
+data/*
 !data/README.md
 secret/*
 !secret/README.md
