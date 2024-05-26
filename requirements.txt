@@ -10,3 +10,11 @@ jinja2
 uvicorn[standard]
 pydub
 beautifulsoup4
+-e ../py_code/whisper
+sudachipy
+sudachidict_core
+neologdn
+langchain
+ginza
+ja_ginza
+pyautogui

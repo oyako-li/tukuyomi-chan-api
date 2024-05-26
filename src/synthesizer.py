@@ -31,7 +31,8 @@ text2speech = Text2Speech.from_pretrained(
 
 
 def tts(text: str):
-    wav = text2speech(text)["wav"]
+    with torch.no_grad():
+        wav = text2speech(text)["wav"]
     wav_data = wav.view(-1).cpu().numpy()
     sample_rate = text2speech.fs
     return wav_data, sample_rate
